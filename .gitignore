@@ -1,0 +1,22 @@
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Build/cache artifacts
+node_modules/
+dist/
+build/
+coverage/
+*.log
+
+# Game asset folders you don't want on GitHub
+img/
+*.psd
+*.ai
+*.xcf

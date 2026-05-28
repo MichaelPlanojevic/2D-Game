@@ -8,9 +8,9 @@ class Grass extends DrawableObject {
         ctx.drawImage(
             this.sprite,
             0, 300,   // source: ab y=300
-            300, 110,  // source: 110px hoch
-            0, 470,   // dest: y position
-            800, 60   // dest: auf 800px strecken
+            300, 120,  // source: 110px hoch
+            0, 465,   // dest: weiter nach oben
+            800, 110  // dest: hoeher strecken
         );
     }
 }

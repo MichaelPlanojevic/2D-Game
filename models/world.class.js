@@ -11,6 +11,7 @@ class World {
         this.background = new Background();
         this.littleTree = new LittleTree();
         this.tree = new Tree();
+        this.mountains = new MountainsObject();
 
         // Warten bis ALLE Sprites geladen sind
         this.waitForAssets().then(() => {
@@ -27,7 +28,8 @@ class World {
             this.ground,
             this.grass,
             this.littleTree,
-            this.tree
+            this.tree,
+            this.mountains
         ];
 
         const promises = objects.map(obj =>
@@ -51,10 +53,11 @@ class World {
     animate(timestamp) {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.background.draw(this.ctx);
+        this.mountains.draw(this.ctx);
         this.grass.draw(this.ctx);
+        this.bushes.draw(this.ctx);
         this.ground.draw(this.ctx);
         this.clouds.draw(this.ctx);
-        this.bushes.draw(this.ctx);
         this.littleTree.draw(this.ctx);  // ← auskommentieren
         this.tree.draw(this.ctx);        // ← auskommentieren
         this.character.draw(this.ctx, timestamp);
